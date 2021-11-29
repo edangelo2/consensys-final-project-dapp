@@ -1,0 +1,2279 @@
+{
+  "contractName": "IAuditAssignments",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auditId",
+          "type": "uint256"
+        }
+      ],
+      "name": "isAuditAssigned",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auditId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address[]",
+          "name": "_auditors",
+          "type": "address[]"
+        }
+      ],
+      "name": "insertAuditAssignment",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auditId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getAuditAssignment",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "index",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "auditId",
+              "type": "uint256"
+            },
+            {
+              "internalType": "address[]",
+              "name": "auditors",
+              "type": "address[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "auditResultIds",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "uint256[]",
+              "name": "auditorFees",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "bool[]",
+              "name": "auditorFeePaid",
+              "type": "bool[]"
+            },
+            {
+              "internalType": "bool[]",
+              "name": "auditorResults",
+              "type": "bool[]"
+            }
+          ],
+          "internalType": "struct IAuditAssignments.AuditAssignmentData",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auditId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "auditor",
+          "type": "address"
+        }
+      ],
+      "name": "isAuditorAssigned",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auditId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "auditResultId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "auditor",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "auditorResult",
+          "type": "bool"
+        }
+      ],
+      "name": "updateAuditResult",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "success",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "auditId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "auditorFees",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bool[]",
+          "name": "auditorFeePaid",
+          "type": "bool[]"
+        }
+      ],
+      "name": "updatePayments",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.3+commit.8d00100c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"}],\"name\":\"getAuditAssignment\",\"outputs\":[{\"components\":[{\"internalType\":\"uint256\",\"name\":\"index\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"auditors\",\"type\":\"address[]\"},{\"internalType\":\"uint256[]\",\"name\":\"auditResultIds\",\"type\":\"uint256[]\"},{\"internalType\":\"uint256[]\",\"name\":\"auditorFees\",\"type\":\"uint256[]\"},{\"internalType\":\"bool[]\",\"name\":\"auditorFeePaid\",\"type\":\"bool[]\"},{\"internalType\":\"bool[]\",\"name\":\"auditorResults\",\"type\":\"bool[]\"}],\"internalType\":\"struct IAuditAssignments.AuditAssignmentData\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"},{\"internalType\":\"address[]\",\"name\":\"_auditors\",\"type\":\"address[]\"}],\"name\":\"insertAuditAssignment\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"}],\"name\":\"isAuditAssigned\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"auditor\",\"type\":\"address\"}],\"name\":\"isAuditorAssigned\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"auditResultId\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"auditor\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"auditorResult\",\"type\":\"bool\"}],\"name\":\"updateAuditResult\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"success\",\"type\":\"bool\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"auditId\",\"type\":\"uint256\"},{\"internalType\":\"uint256[]\",\"name\":\"auditorFees\",\"type\":\"uint256[]\"},{\"internalType\":\"bool[]\",\"name\":\"auditorFeePaid\",\"type\":\"bool[]\"}],\"name\":\"updatePayments\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Enrique R. D'Angelo\",\"kind\":\"dev\",\"methods\":{\"getAuditAssignment(uint256)\":{\"details\":\"raises an exception if the audit is not assigned\",\"params\":{\"auditId\":\"functional key of the audit Item tokenId = auditId\"},\"returns\":{\"_0\":\"AuditAssignmentData - Struct with the Audit Assignment Information \"}},\"insertAuditAssignment(uint256,address[])\":{\"details\":\"The (DAudit) uses this method to assign the result of the assignment processes\",\"params\":{\"_auditors\":\"array of auditors to be assigned to the audit item\",\"auditId\":\"functional key of the audit Item tokenId = auditId\"}},\"isAuditAssigned(uint256)\":{\"details\":\"Used to check as required for certain functios assuming there is and audit struct already in place\",\"params\":{\"auditId\":\"functional key of the audit Item tokenId = auditId\"},\"returns\":{\"_0\":\"true if the audit has assignments, otherwise returns false\"}},\"isAuditorAssigned(uint256,address)\":{\"params\":{\"auditId\":\"functional key of the audit Item tokenId = auditId to be checked for assignemnt\",\"auditor\":\"address of the auditor to check the assignemnt \"},\"returns\":{\"_0\":\"true if the auditor is assigned to the audit item, false if no assigned to the audit item. \"}},\"updateAuditResult(uint256,uint256,address,bool)\":{\"params\":{\"auditId\":\"functional key of the AuditItem tokenId = auditId to be checked for assignemnt\",\"auditResultId\":\"functional key of the AuditResult with the results evidence submitted by the auditor (AuditResult tokenId)  \",\"auditor\":\"address of the auditor submitting the results \",\"auditorResult\":\"boolean value indicating if the auditor indicated the audit results to Passed (true) or Failed (false)\"},\"returns\":{\"success\":\"= true if the auditor is assigned to the audit item, false if no assigned to the audit item.\"}},\"updatePayments(uint256,uint256[],bool[])\":{\"details\":\"arrays must be in the same order of the addresses submitted when the audit was assigned \",\"params\":{\"auditId\":\"functional key of the AuditItem tokenId = auditId to update the payments information\",\"auditorFeePaid\":\"- array with boolean values indicating the fee was paid to the auditor or not. \",\"auditorFees\":\"- array with the fee paid to each auditor \"}}},\"title\":\"Auditor Assignments Interface\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"getAuditAssignment(uint256)\":{\"notice\":\"Returns and auditor assignments information from a given audit item. \"},\"insertAuditAssignment(uint256,address[])\":{\"notice\":\"Adds a set of auditors to a given audit item\"},\"isAuditAssigned(uint256)\":{\"notice\":\"Finds if the system has assignments registered for the audit\"},\"isAuditorAssigned(uint256,address)\":{\"notice\":\"Returns true if the auditor (address) is assigned to a given audit Item. \"},\"updateAuditResult(uint256,uint256,address,bool)\":{\"notice\":\"Saves the audit results submitted by the auditor and associate the information to the audit item assignment. \"},\"updatePayments(uint256,uint256[],bool[])\":{\"notice\":\"Updates the payments done to an Audit Item.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IAuditorAssignments.sol\":\"IAuditAssignments\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IAuditorAssignments.sol\":{\"keccak256\":\"0x7c1aa00136744b2db7d7468908b614af9086182dbd977e4239eeeabb545aa464\",\"license\":\"MIT OR Apache-2.0\",\"urls\":[\"bzz-raw://6780f54b7e012066d46b1d04fa97708463c667fdec9b17bfc225a1cd8383325e\",\"dweb:/ipfs/Qmef2v9k9onsPftztoTEf6gKMYPkBYGXh8gLWyFRFeQHpp\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: MIT OR Apache-2.0\npragma solidity 0.8.3;\n\n/// @title Auditor Assignments Interface\n/// @author Enrique R. D'Angelo\ninterface IAuditAssignments {\n\n  /* Struct containing information of the entity to be stored \n  * index = autonumber for the assignment (primary key)\n  * auditId = TokenId of the AuditItem\n  * auditors = Array containing the addresses of assigned auditors \n  * auditResultIds = Array containing the Audit Result token Ids of the results submitted by each auditor \n  * auditorFees = Array with amounts of fees paid to the auditors (in eth)\n  * auditorFeePaid = Array of boolean values indicating whether the auditor was paid or not.\n  * auditorResults = Array of boolean values indicating if the auditor indicated the audit results to Passed (true) or Failed (false)\n  *                   true  = Failed      - Auditor evaluation outcome determined that the audit failed\n  *                   false = Passed      - Auditor evaluation outcome determined that the audit was successful\n  */\n  struct AuditAssignmentData {\n    uint256 index;\n    uint256 auditId;\n    address[] auditors;\n    uint256[] auditResultIds;   \n    uint256[] auditorFees;\n    bool[] auditorFeePaid;\n    bool[] auditorResults;\n  }\n  /// @notice Finds if the system has assignments registered for the audit\n  /// @dev Used to check as required for certain functios assuming there is and audit struct already in place\n  /// @param auditId functional key of the audit Item tokenId = auditId\n  /// @return true if the audit has assignments, otherwise returns false\n    function isAuditAssigned(uint256 auditId) external view returns (bool);\n\n  /// @notice Adds a set of auditors to a given audit item\n  /// @dev The (DAudit) uses this method to assign the result of the assignment processes\n  /// @param auditId functional key of the audit Item tokenId = auditId\n  /// @param _auditors array of auditors to be assigned to the audit item\n  function insertAuditAssignment(uint auditId, address[] memory _auditors )\n        external;\n\n  /// @notice Returns and auditor assignments information from a given audit item. \n  /// @dev raises an exception if the audit is not assigned\n  /// @param auditId functional key of the audit Item tokenId = auditId\n  /// @return AuditAssignmentData - Struct with the Audit Assignment Information \n  function getAuditAssignment(uint256 auditId)\n    external\n    view\n    returns (AuditAssignmentData memory);\n\n  /// @notice Returns true if the auditor (address) is assigned to a given audit Item. \n  /// @param auditId functional key of the audit Item tokenId = auditId to be checked for assignemnt\n  /// @param auditor address of the auditor to check the assignemnt \n  /// @return true if the auditor is assigned to the audit item, false if no assigned to the audit item. \n  function isAuditorAssigned(uint256 auditId, address auditor)\n    external\n    view\n    returns (bool);\n\n  /// @notice Saves the audit results submitted by the auditor and associate the information to the audit item assignment. \n  /// @param auditId functional key of the AuditItem tokenId = auditId to be checked for assignemnt\n  /// @param auditResultId functional key of the AuditResult with the results evidence submitted by the auditor (AuditResult tokenId)  \n  /// @param auditor address of the auditor submitting the results \n  /// @param auditorResult boolean value indicating if the auditor indicated the audit results to Passed (true) or Failed (false)\n  /// @return success = true if the auditor is assigned to the audit item, false if no assigned to the audit item.\n  function updateAuditResult(\n    uint256 auditId,\n    uint256 auditResultId,\n    address auditor,\n    bool auditorResult\n    ) external returns (bool success);\n\n  /// @notice Updates the payments done to an Audit Item.\n  /// @dev arrays must be in the same order of the addresses submitted when the audit was assigned \n  /// @param auditId functional key of the AuditItem tokenId = auditId to update the payments information\n  /// @param auditorFees  - array with the fee paid to each auditor \n  /// @param auditorFeePaid - array with boolean values indicating the fee was paid to the auditor or not. \n  function updatePayments(\n        uint256 auditId,\n        uint256[] memory auditorFees,\n        bool[] memory auditorFeePaid\n  ) external;\n\n}\n",
+  "sourcePath": "/Users/enriquerafaeldangelo/consensys/blockchain-developer-bootcamp-final-project/contracts/IAuditorAssignments.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IAuditorAssignments.sol",
+    "exportedSymbols": {
+      "IAuditAssignments": [
+        4435
+      ]
+    },
+    "id": 4436,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4351,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:22:18"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 4352,
+          "nodeType": "StructuredDocumentation",
+          "src": "70:73:18",
+          "text": "@title Auditor Assignments Interface\n @author Enrique R. D'Angelo"
+        },
+        "fullyImplemented": false,
+        "id": 4435,
+        "linearizedBaseContracts": [
+          4435
+        ],
+        "name": "IAuditAssignments",
+        "nameLocation": "153:17:18",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IAuditAssignments.AuditAssignmentData",
+            "id": 4372,
+            "members": [
+              {
+                "constant": false,
+                "id": 4354,
+                "mutability": "mutable",
+                "name": "index",
+                "nameLocation": "1073:5:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1065:13:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4353,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1065:7:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4356,
+                "mutability": "mutable",
+                "name": "auditId",
+                "nameLocation": "1092:7:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1084:15:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4355,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1084:7:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4359,
+                "mutability": "mutable",
+                "name": "auditors",
+                "nameLocation": "1115:8:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1105:18:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4357,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1105:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4358,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1105:9:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4362,
+                "mutability": "mutable",
+                "name": "auditResultIds",
+                "nameLocation": "1139:14:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1129:24:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4360,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1129:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4361,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1129:9:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4365,
+                "mutability": "mutable",
+                "name": "auditorFees",
+                "nameLocation": "1172:11:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1162:21:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4363,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1162:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4364,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1162:9:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4368,
+                "mutability": "mutable",
+                "name": "auditorFeePaid",
+                "nameLocation": "1196:14:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1189:21:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                  "typeString": "bool[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4366,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1189:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4367,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1189:6:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                    "typeString": "bool[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4371,
+                "mutability": "mutable",
+                "name": "auditorResults",
+                "nameLocation": "1223:14:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1216:21:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                  "typeString": "bool[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4369,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1216:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4370,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1216:6:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                    "typeString": "bool[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "AuditAssignmentData",
+            "nameLocation": "1039:19:18",
+            "nodeType": "StructDefinition",
+            "scope": 4435,
+            "src": "1032:210:18",
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 4373,
+              "nodeType": "StructuredDocumentation",
+              "src": "1245:327:18",
+              "text": "@notice Finds if the system has assignments registered for the audit\n @dev Used to check as required for certain functios assuming there is and audit struct already in place\n @param auditId functional key of the audit Item tokenId = auditId\n @return true if the audit has assignments, otherwise returns false"
+            },
+            "functionSelector": "e92f74e4",
+            "id": 4380,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAuditAssigned",
+            "nameLocation": "1586:15:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4375,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "1610:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4380,
+                  "src": "1602:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4374,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1602:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1601:17:18"
+            },
+            "returnParameters": {
+              "id": 4379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4378,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4380,
+                  "src": "1642:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4377,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1642:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1641:6:18"
+            },
+            "scope": 4435,
+            "src": "1577:71:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4381,
+              "nodeType": "StructuredDocumentation",
+              "src": "1652:292:18",
+              "text": "@notice Adds a set of auditors to a given audit item\n @dev The (DAudit) uses this method to assign the result of the assignment processes\n @param auditId functional key of the audit Item tokenId = auditId\n @param _auditors array of auditors to be assigned to the audit item"
+            },
+            "functionSelector": "f2a0847d",
+            "id": 4389,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "insertAuditAssignment",
+            "nameLocation": "1956:21:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4383,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "1983:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4389,
+                  "src": "1978:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4382,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1978:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4386,
+                  "mutability": "mutable",
+                  "name": "_auditors",
+                  "nameLocation": "2009:9:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4389,
+                  "src": "1992:26:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4384,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1992:7:18",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 4385,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1992:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1977:43:18"
+            },
+            "returnParameters": {
+              "id": 4388,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2037:0:18"
+            },
+            "scope": 4435,
+            "src": "1947:91:18",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4390,
+              "nodeType": "StructuredDocumentation",
+              "src": "2042:295:18",
+              "text": "@notice Returns and auditor assignments information from a given audit item. \n @dev raises an exception if the audit is not assigned\n @param auditId functional key of the audit Item tokenId = auditId\n @return AuditAssignmentData - Struct with the Audit Assignment Information "
+            },
+            "functionSelector": "f8edc10f",
+            "id": 4398,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAuditAssignment",
+            "nameLocation": "2349:18:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4392,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "2376:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "2368:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4391,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2368:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2367:17:18"
+            },
+            "returnParameters": {
+              "id": 4397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4396,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "2420:26:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AuditAssignmentData_$4372_memory_ptr",
+                    "typeString": "struct IAuditAssignments.AuditAssignmentData"
+                  },
+                  "typeName": {
+                    "id": 4395,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4394,
+                      "name": "AuditAssignmentData",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4372,
+                      "src": "2420:19:18"
+                    },
+                    "referencedDeclaration": 4372,
+                    "src": "2420:19:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AuditAssignmentData_$4372_storage_ptr",
+                      "typeString": "struct IAuditAssignments.AuditAssignmentData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2419:28:18"
+            },
+            "scope": 4435,
+            "src": "2340:108:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4399,
+              "nodeType": "StructuredDocumentation",
+              "src": "2452:361:18",
+              "text": "@notice Returns true if the auditor (address) is assigned to a given audit Item. \n @param auditId functional key of the audit Item tokenId = auditId to be checked for assignemnt\n @param auditor address of the auditor to check the assignemnt \n @return true if the auditor is assigned to the audit item, false if no assigned to the audit item. "
+            },
+            "functionSelector": "fef4eddd",
+            "id": 4408,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAuditorAssigned",
+            "nameLocation": "2825:17:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4404,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4401,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "2851:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "2843:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4400,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2843:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4403,
+                  "mutability": "mutable",
+                  "name": "auditor",
+                  "nameLocation": "2868:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "2860:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4402,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2860:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2842:34:18"
+            },
+            "returnParameters": {
+              "id": 4407,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4406,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "2912:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4405,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2912:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2911:6:18"
+            },
+            "scope": 4435,
+            "src": "2816:102:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4409,
+              "nodeType": "StructuredDocumentation",
+              "src": "2922:670:18",
+              "text": "@notice Saves the audit results submitted by the auditor and associate the information to the audit item assignment. \n @param auditId functional key of the AuditItem tokenId = auditId to be checked for assignemnt\n @param auditResultId functional key of the AuditResult with the results evidence submitted by the auditor (AuditResult tokenId)  \n @param auditor address of the auditor submitting the results \n @param auditorResult boolean value indicating if the auditor indicated the audit results to Passed (true) or Failed (false)\n @return success = true if the auditor is assigned to the audit item, false if no assigned to the audit item."
+            },
+            "functionSelector": "465d063c",
+            "id": 4422,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateAuditResult",
+            "nameLocation": "3604:17:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4418,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4411,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "3635:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3627:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4410,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3627:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4413,
+                  "mutability": "mutable",
+                  "name": "auditResultId",
+                  "nameLocation": "3656:13:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3648:21:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4412,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3648:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4415,
+                  "mutability": "mutable",
+                  "name": "auditor",
+                  "nameLocation": "3683:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3675:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4414,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3675:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4417,
+                  "mutability": "mutable",
+                  "name": "auditorResult",
+                  "nameLocation": "3701:13:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3696:18:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4416,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3696:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3621:99:18"
+            },
+            "returnParameters": {
+              "id": 4421,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4420,
+                  "mutability": "mutable",
+                  "name": "success",
+                  "nameLocation": "3744:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3739:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4419,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3739:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3738:14:18"
+            },
+            "scope": 4435,
+            "src": "3595:158:18",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4423,
+              "nodeType": "StructuredDocumentation",
+              "src": "3757:438:18",
+              "text": "@notice Updates the payments done to an Audit Item.\n @dev arrays must be in the same order of the addresses submitted when the audit was assigned \n @param auditId functional key of the AuditItem tokenId = auditId to update the payments information\n @param auditorFees  - array with the fee paid to each auditor \n @param auditorFeePaid - array with boolean values indicating the fee was paid to the auditor or not. "
+            },
+            "functionSelector": "f25d7f78",
+            "id": 4434,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updatePayments",
+            "nameLocation": "4207:14:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4425,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "4239:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4434,
+                  "src": "4231:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4424,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4231:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4428,
+                  "mutability": "mutable",
+                  "name": "auditorFees",
+                  "nameLocation": "4273:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4434,
+                  "src": "4256:28:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4426,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4256:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4427,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4256:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4431,
+                  "mutability": "mutable",
+                  "name": "auditorFeePaid",
+                  "nameLocation": "4308:14:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4434,
+                  "src": "4294:28:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4429,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4294:4:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 4430,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4294:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4221:105:18"
+            },
+            "returnParameters": {
+              "id": 4433,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4335:0:18"
+            },
+            "scope": 4435,
+            "src": "4198:138:18",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4436,
+        "src": "143:4196:18"
+      }
+    ],
+    "src": "46:4294:18"
+  },
+  "legacyAST": {
+    "absolutePath": "project:/contracts/IAuditorAssignments.sol",
+    "exportedSymbols": {
+      "IAuditAssignments": [
+        4435
+      ]
+    },
+    "id": 4436,
+    "license": "MIT OR Apache-2.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 4351,
+        "literals": [
+          "solidity",
+          "0.8",
+          ".3"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "46:22:18"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 4352,
+          "nodeType": "StructuredDocumentation",
+          "src": "70:73:18",
+          "text": "@title Auditor Assignments Interface\n @author Enrique R. D'Angelo"
+        },
+        "fullyImplemented": false,
+        "id": 4435,
+        "linearizedBaseContracts": [
+          4435
+        ],
+        "name": "IAuditAssignments",
+        "nameLocation": "153:17:18",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "IAuditAssignments.AuditAssignmentData",
+            "id": 4372,
+            "members": [
+              {
+                "constant": false,
+                "id": 4354,
+                "mutability": "mutable",
+                "name": "index",
+                "nameLocation": "1073:5:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1065:13:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4353,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1065:7:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4356,
+                "mutability": "mutable",
+                "name": "auditId",
+                "nameLocation": "1092:7:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1084:15:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4355,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1084:7:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4359,
+                "mutability": "mutable",
+                "name": "auditors",
+                "nameLocation": "1115:8:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1105:18:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4357,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1105:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 4358,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1105:9:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4362,
+                "mutability": "mutable",
+                "name": "auditResultIds",
+                "nameLocation": "1139:14:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1129:24:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4360,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1129:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4361,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1129:9:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4365,
+                "mutability": "mutable",
+                "name": "auditorFees",
+                "nameLocation": "1172:11:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1162:21:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                  "typeString": "uint256[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4363,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1162:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 4364,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1162:9:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                    "typeString": "uint256[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4368,
+                "mutability": "mutable",
+                "name": "auditorFeePaid",
+                "nameLocation": "1196:14:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1189:21:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                  "typeString": "bool[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4366,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1189:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4367,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1189:6:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                    "typeString": "bool[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 4371,
+                "mutability": "mutable",
+                "name": "auditorResults",
+                "nameLocation": "1223:14:18",
+                "nodeType": "VariableDeclaration",
+                "scope": 4372,
+                "src": "1216:21:18",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                  "typeString": "bool[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 4369,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1216:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 4370,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1216:6:18",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                    "typeString": "bool[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "AuditAssignmentData",
+            "nameLocation": "1039:19:18",
+            "nodeType": "StructDefinition",
+            "scope": 4435,
+            "src": "1032:210:18",
+            "visibility": "public"
+          },
+          {
+            "documentation": {
+              "id": 4373,
+              "nodeType": "StructuredDocumentation",
+              "src": "1245:327:18",
+              "text": "@notice Finds if the system has assignments registered for the audit\n @dev Used to check as required for certain functios assuming there is and audit struct already in place\n @param auditId functional key of the audit Item tokenId = auditId\n @return true if the audit has assignments, otherwise returns false"
+            },
+            "functionSelector": "e92f74e4",
+            "id": 4380,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAuditAssigned",
+            "nameLocation": "1586:15:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4376,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4375,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "1610:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4380,
+                  "src": "1602:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4374,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1602:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1601:17:18"
+            },
+            "returnParameters": {
+              "id": 4379,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4378,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4380,
+                  "src": "1642:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4377,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1642:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1641:6:18"
+            },
+            "scope": 4435,
+            "src": "1577:71:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4381,
+              "nodeType": "StructuredDocumentation",
+              "src": "1652:292:18",
+              "text": "@notice Adds a set of auditors to a given audit item\n @dev The (DAudit) uses this method to assign the result of the assignment processes\n @param auditId functional key of the audit Item tokenId = auditId\n @param _auditors array of auditors to be assigned to the audit item"
+            },
+            "functionSelector": "f2a0847d",
+            "id": 4389,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "insertAuditAssignment",
+            "nameLocation": "1956:21:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4387,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4383,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "1983:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4389,
+                  "src": "1978:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4382,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1978:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4386,
+                  "mutability": "mutable",
+                  "name": "_auditors",
+                  "nameLocation": "2009:9:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4389,
+                  "src": "1992:26:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_memory_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4384,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1992:7:18",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 4385,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1992:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1977:43:18"
+            },
+            "returnParameters": {
+              "id": 4388,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "2037:0:18"
+            },
+            "scope": 4435,
+            "src": "1947:91:18",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4390,
+              "nodeType": "StructuredDocumentation",
+              "src": "2042:295:18",
+              "text": "@notice Returns and auditor assignments information from a given audit item. \n @dev raises an exception if the audit is not assigned\n @param auditId functional key of the audit Item tokenId = auditId\n @return AuditAssignmentData - Struct with the Audit Assignment Information "
+            },
+            "functionSelector": "f8edc10f",
+            "id": 4398,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getAuditAssignment",
+            "nameLocation": "2349:18:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4393,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4392,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "2376:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "2368:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4391,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2368:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2367:17:18"
+            },
+            "returnParameters": {
+              "id": 4397,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4396,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4398,
+                  "src": "2420:26:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_AuditAssignmentData_$4372_memory_ptr",
+                    "typeString": "struct IAuditAssignments.AuditAssignmentData"
+                  },
+                  "typeName": {
+                    "id": 4395,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 4394,
+                      "name": "AuditAssignmentData",
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 4372,
+                      "src": "2420:19:18"
+                    },
+                    "referencedDeclaration": 4372,
+                    "src": "2420:19:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_AuditAssignmentData_$4372_storage_ptr",
+                      "typeString": "struct IAuditAssignments.AuditAssignmentData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2419:28:18"
+            },
+            "scope": 4435,
+            "src": "2340:108:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4399,
+              "nodeType": "StructuredDocumentation",
+              "src": "2452:361:18",
+              "text": "@notice Returns true if the auditor (address) is assigned to a given audit Item. \n @param auditId functional key of the audit Item tokenId = auditId to be checked for assignemnt\n @param auditor address of the auditor to check the assignemnt \n @return true if the auditor is assigned to the audit item, false if no assigned to the audit item. "
+            },
+            "functionSelector": "fef4eddd",
+            "id": 4408,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isAuditorAssigned",
+            "nameLocation": "2825:17:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4404,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4401,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "2851:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "2843:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4400,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2843:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4403,
+                  "mutability": "mutable",
+                  "name": "auditor",
+                  "nameLocation": "2868:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "2860:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4402,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2860:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2842:34:18"
+            },
+            "returnParameters": {
+              "id": 4407,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4406,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4408,
+                  "src": "2912:4:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4405,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2912:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2911:6:18"
+            },
+            "scope": 4435,
+            "src": "2816:102:18",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4409,
+              "nodeType": "StructuredDocumentation",
+              "src": "2922:670:18",
+              "text": "@notice Saves the audit results submitted by the auditor and associate the information to the audit item assignment. \n @param auditId functional key of the AuditItem tokenId = auditId to be checked for assignemnt\n @param auditResultId functional key of the AuditResult with the results evidence submitted by the auditor (AuditResult tokenId)  \n @param auditor address of the auditor submitting the results \n @param auditorResult boolean value indicating if the auditor indicated the audit results to Passed (true) or Failed (false)\n @return success = true if the auditor is assigned to the audit item, false if no assigned to the audit item."
+            },
+            "functionSelector": "465d063c",
+            "id": 4422,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updateAuditResult",
+            "nameLocation": "3604:17:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4418,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4411,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "3635:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3627:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4410,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3627:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4413,
+                  "mutability": "mutable",
+                  "name": "auditResultId",
+                  "nameLocation": "3656:13:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3648:21:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4412,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3648:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4415,
+                  "mutability": "mutable",
+                  "name": "auditor",
+                  "nameLocation": "3683:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3675:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 4414,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3675:7:18",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4417,
+                  "mutability": "mutable",
+                  "name": "auditorResult",
+                  "nameLocation": "3701:13:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3696:18:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4416,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3696:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3621:99:18"
+            },
+            "returnParameters": {
+              "id": 4421,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4420,
+                  "mutability": "mutable",
+                  "name": "success",
+                  "nameLocation": "3744:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4422,
+                  "src": "3739:12:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 4419,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3739:4:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3738:14:18"
+            },
+            "scope": 4435,
+            "src": "3595:158:18",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "documentation": {
+              "id": 4423,
+              "nodeType": "StructuredDocumentation",
+              "src": "3757:438:18",
+              "text": "@notice Updates the payments done to an Audit Item.\n @dev arrays must be in the same order of the addresses submitted when the audit was assigned \n @param auditId functional key of the AuditItem tokenId = auditId to update the payments information\n @param auditorFees  - array with the fee paid to each auditor \n @param auditorFeePaid - array with boolean values indicating the fee was paid to the auditor or not. "
+            },
+            "functionSelector": "f25d7f78",
+            "id": 4434,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "updatePayments",
+            "nameLocation": "4207:14:18",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 4432,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 4425,
+                  "mutability": "mutable",
+                  "name": "auditId",
+                  "nameLocation": "4239:7:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4434,
+                  "src": "4231:15:18",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 4424,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "4231:7:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4428,
+                  "mutability": "mutable",
+                  "name": "auditorFees",
+                  "nameLocation": "4273:11:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4434,
+                  "src": "4256:28:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4426,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4256:7:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 4427,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4256:9:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 4431,
+                  "mutability": "mutable",
+                  "name": "auditorFeePaid",
+                  "nameLocation": "4308:14:18",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 4434,
+                  "src": "4294:28:18",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_bool_$dyn_memory_ptr",
+                    "typeString": "bool[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 4429,
+                      "name": "bool",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "4294:4:18",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "id": 4430,
+                    "nodeType": "ArrayTypeName",
+                    "src": "4294:6:18",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_bool_$dyn_storage_ptr",
+                      "typeString": "bool[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "4221:105:18"
+            },
+            "returnParameters": {
+              "id": 4433,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "4335:0:18"
+            },
+            "scope": 4435,
+            "src": "4198:138:18",
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 4436,
+        "src": "143:4196:18"
+      }
+    ],
+    "src": "46:4294:18"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.3+commit.8d00100c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.3",
+  "updatedAt": "2021-11-27T23:56:05.010Z",
+  "devdoc": {
+    "author": "Enrique R. D'Angelo",
+    "kind": "dev",
+    "methods": {
+      "getAuditAssignment(uint256)": {
+        "details": "raises an exception if the audit is not assigned",
+        "params": {
+          "auditId": "functional key of the audit Item tokenId = auditId"
+        },
+        "returns": {
+          "_0": "AuditAssignmentData - Struct with the Audit Assignment Information "
+        }
+      },
+      "insertAuditAssignment(uint256,address[])": {
+        "details": "The (DAudit) uses this method to assign the result of the assignment processes",
+        "params": {
+          "_auditors": "array of auditors to be assigned to the audit item",
+          "auditId": "functional key of the audit Item tokenId = auditId"
+        }
+      },
+      "isAuditAssigned(uint256)": {
+        "details": "Used to check as required for certain functios assuming there is and audit struct already in place",
+        "params": {
+          "auditId": "functional key of the audit Item tokenId = auditId"
+        },
+        "returns": {
+          "_0": "true if the audit has assignments, otherwise returns false"
+        }
+      },
+      "isAuditorAssigned(uint256,address)": {
+        "params": {
+          "auditId": "functional key of the audit Item tokenId = auditId to be checked for assignemnt",
+          "auditor": "address of the auditor to check the assignemnt "
+        },
+        "returns": {
+          "_0": "true if the auditor is assigned to the audit item, false if no assigned to the audit item. "
+        }
+      },
+      "updateAuditResult(uint256,uint256,address,bool)": {
+        "params": {
+          "auditId": "functional key of the AuditItem tokenId = auditId to be checked for assignemnt",
+          "auditResultId": "functional key of the AuditResult with the results evidence submitted by the auditor (AuditResult tokenId)  ",
+          "auditor": "address of the auditor submitting the results ",
+          "auditorResult": "boolean value indicating if the auditor indicated the audit results to Passed (true) or Failed (false)"
+        },
+        "returns": {
+          "success": "= true if the auditor is assigned to the audit item, false if no assigned to the audit item."
+        }
+      },
+      "updatePayments(uint256,uint256[],bool[])": {
+        "details": "arrays must be in the same order of the addresses submitted when the audit was assigned ",
+        "params": {
+          "auditId": "functional key of the AuditItem tokenId = auditId to update the payments information",
+          "auditorFeePaid": "- array with boolean values indicating the fee was paid to the auditor or not. ",
+          "auditorFees": "- array with the fee paid to each auditor "
+        }
+      }
+    },
+    "title": "Auditor Assignments Interface",
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "getAuditAssignment(uint256)": {
+        "notice": "Returns and auditor assignments information from a given audit item. "
+      },
+      "insertAuditAssignment(uint256,address[])": {
+        "notice": "Adds a set of auditors to a given audit item"
+      },
+      "isAuditAssigned(uint256)": {
+        "notice": "Finds if the system has assignments registered for the audit"
+      },
+      "isAuditorAssigned(uint256,address)": {
+        "notice": "Returns true if the auditor (address) is assigned to a given audit Item. "
+      },
+      "updateAuditResult(uint256,uint256,address,bool)": {
+        "notice": "Saves the audit results submitted by the auditor and associate the information to the audit item assignment. "
+      },
+      "updatePayments(uint256,uint256[],bool[])": {
+        "notice": "Updates the payments done to an Audit Item."
+      }
+    },
+    "version": 1
+  }
+}
