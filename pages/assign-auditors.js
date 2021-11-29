@@ -110,15 +110,15 @@ export default function AssignAuditors() {
       const transaction3 = await contract3.assignAuditors(id,{value:'0'})
       const trxR = await transaction3.wait()
     }
-    catch  (error)  {
-      if (error.code = -32603) {
-        window.alert('Ownable: caller is not the owner')
-      }
+
+    catch (error) {
+      if (error.data == undefined) window.alert(error.message) 
       else {
-        window.alert('Check Console')
+        window.alert(error.data.message)
         console.log(error)
       }
-    }
+     }
+   
   
     loadAuditItems()
   }

@@ -101,10 +101,9 @@ export default function EnrollAuditor() {
       const trxR = await transaction3.wait()
     }
     catch (error) {
-      if (error.code = -32603) {
-      window.alert('Auditor cannot be the producer'); }
+      if (error.data == undefined) window.alert(error.message) 
       else {
-        window.alert('Check Console')
+        window.alert(error.data.message)
         console.log(error)
       }
     }

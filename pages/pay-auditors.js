@@ -130,15 +130,13 @@ useEffect(() => {
     try {    
       const transaction = await contract.payAuditors(AItem.tokenId, { value: payFeeStr })
       await transaction.wait()
-    // Send the user to the home page
+      // Send the user to the home page
       router.push('/')
     }
-    catch  (error)  {
-      if (error.code = -32603) {
-        window.alert('Ownable: caller is not the owner')
-      }
+    catch (error) {
+      if (error.data == undefined) window.alert(error.message) 
       else {
-        window.alert('Check Console')
+        window.alert(error.data.message)
         console.log(error)
       }
     }

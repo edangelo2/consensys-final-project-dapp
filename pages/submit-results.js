@@ -192,8 +192,17 @@ useEffect(() => {
     let auditResultNbr = parseInt(auditResult)
 
     // Create the audit result
-    transaction = await contract.createAuditResult(auditResultAddress, AItem.tokenId, tokenId, auditResultNbr, { value: payFeeStr })
-    await transaction.wait()
+    try {
+      transaction = await contract.createAuditResult(auditResultAddress, AItem.tokenId, tokenId, auditResultNbr, { value: payFeeStr })
+      await transaction.wait()
+    } 
+    catch (error) {
+      if (error.data == undefined) window.alert(error.message) 
+      else {
+        window.alert(error.data.message)
+        console.log(error)
+      }
+    }
 
     // Send the user to the home page
     router.push('/')
